@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学生注册 - 智能图书系统</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <h2>学生注册</h2>
+    <form method="post" action="../php/register.php">
+        <input type="text" name="student_id" placeholder="学号" required>
+        <input type="text" name="name" placeholder="姓名" required>
+        <select name="gender" required>
+            <option value="">选择性别</option>
+            <option value="男">男</option>
+            <option value="女">女</option>
+        </select>
+        <input type="text" name="department" placeholder="院系" required>
+        <input type="text" name="major" placeholder="专业" required>
+        <input type="text" name="grade" placeholder="年级" required>
+        <input type="text" name="class" placeholder="班级" required>
+        <input type="text" name="contact" placeholder="联系方式" required>
+        <input type="email" name="email" placeholder="邮箱" required>
+        <input type="password" name="password" placeholder="密码" required>
+        <input type="password" name="confirm_password" placeholder="确认密码" required>
+        <button type="submit">注册</button>
+    </form>
+    <p>已有账号？<a href="login.html">去登录</a></p>
+</body>
+
+</html>
