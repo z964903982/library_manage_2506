@@ -49,8 +49,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['borrow_isbn'])) {
         $error = "你已达到最大借阅数量（{$max_borrow} 本），请先归还部分图书后再借阅。";
     } else {
         // 插入借阅记录
-        $borrow_date = date('Y-m-d');
-        $due_date = date('Y-m-d', strtotime('+30 days'));
+$borrow_date = date('Y-m-d');
+
+// 默认归还天数为30（防止没有设置）
+$borrow_days = 30;
+
+// 查询系统配置中归还天数
+$days_sql = "SELECT config_value FROM systemconfig WHERE config_key = 'default_borrow_days'";
+
+$days_result = $conn->query($days_sql);
+if ($days_result && $row = $days_result->fetch_assoc()) {
+    $borrow_days = intval($row['config_value']); // 转换为整数
+}
+
+// 计算归还日期
+$due_date = date('Y-m-d', strtotime("+{$borrow_days} days"));
+
         $status = '借出';
 
         $insert = $conn->prepare("INSERT INTO borrowrecord (ISBN, student_id, borrow_date, due_date, status) VALUES (?, ?, ?, ?, ?)");
@@ -157,12 +171,12 @@ $result = $stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <title>图书查询与借阅</title>
-    <link rel="stylesheet" href="../../css/style.css">
+
     <link rel="stylesheet" href="../../css/search_book.css">
 </head>
 <body>
 
-<h2>欢迎你，<?php echo htmlspecialchars($_SESSION['name']); ?> 同学</h2>
+<h2 style="color: black;">欢迎你，<?php echo htmlspecialchars($_SESSION['name']); ?> 同学</h2>
 
 <!-- 提示信息 -->
 <?php if (isset($success)) echo "<p style='color: green;'>$success</p>"; ?>

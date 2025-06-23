@@ -41,7 +41,7 @@ $reserve_result = $stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <title>我的预约记录</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/reserve_book.css">
     <style>
         .book-card {
             border: 1px solid #ccc;
@@ -93,7 +93,7 @@ $reserve_result = $stmt->get_result();
                 <p><strong>状态：</strong><?php echo htmlspecialchars($row['status']); ?></p>
 
                 <?php if ($row['status'] === '已通知'): ?>
-                    <p class="status-hint">图书已到架！请尽快前往借阅页面借阅。</p>
+                    <p class="status-hint" style="color: red;">图书已到架！请尽快前往借阅页面借阅。</p>
                 <?php endif; ?>
 
                 <?php if ($row['status'] === '等待'): ?>

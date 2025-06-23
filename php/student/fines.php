@@ -41,6 +41,7 @@ $result = $stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <title>罚款缴费</title>
+    <link rel="stylesheet" href="../../css/fines.css">
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; background:rgb(255, 255, 255); }
         table { border-collapse: collapse; width: 100%; background: #fff; }

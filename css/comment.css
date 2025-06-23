@@ -1,0 +1,171 @@
+body {
+    font-family: "Helvetica Neue", "Microsoft YaHei", Arial, sans-serif;
+    background-color: #eaf4fc;
+    /* 浅蓝背景 */
+    margin: 0;
+    padding: 30px 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 122, 204, 0.12);
+    padding: 30px 40px;
+}
+
+h2 {
+    color: #002137;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.review-block {
+    background-color: #f4faff;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 122, 204, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.review-block:hover {
+    box-shadow: 0 8px 28px rgba(0, 122, 204, 0.2);
+}
+
+.review-block h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #005fa3;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+label {
+    font-weight: 600;
+    color: #004a99;
+}
+
+.rating-select {
+    width: 80px;
+    padding: 5px 8px;
+    border: 1px solid #a9c4e8;
+    border-radius: 6px;
+    background-color: #fff;
+    font-weight: 500;
+    color: #004a99;
+    margin-top: 6px;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #a9c4e8;
+    padding: 10px;
+    font-size: 15px;
+    color: #333;
+    margin-top: 8px;
+    resize: vertical;
+    min-height: 80px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+}
+
+.review-actions {
+    margin-top: 15px;
+}
+
+.review-actions button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+}
+
+.review-actions button:hover {
+    background-color: #005fa3;
+    box-shadow: 0 6px 18px rgba(0, 122, 204, 0.4);
+}
+
+.delete-button {
+    color: #d32f2f;
+    background: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.delete-button:hover {
+    color: #9a1c1c;
+    text-decoration: underline;
+}
+
+.success,
+.error {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 25px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.success {
+    color: #2e7d32;
+    background-color: #e6f4ea;
+    border: 1px solid #1b572a;
+}
+
+.error {
+    color: #d32f2f;
+    background-color: #fdecea;
+    border: 1px solid #b71c1c;
+}
+
+p[style*="color:gray"] {
+    color: #666666;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007acc;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式适配 */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .review-actions button,
+    .delete-button {
+        display: block;
+        width: 100%;
+        margin: 8px 0 0 0;
+    }
+
+    .delete-button {
+        margin-left: 0;
+    }
+}

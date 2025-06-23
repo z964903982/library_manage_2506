@@ -66,7 +66,7 @@ $result = $stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <title>预约队列管理</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/manage_books.css">
 </head>
 <body>
     <h2>预约队列管理</h2>

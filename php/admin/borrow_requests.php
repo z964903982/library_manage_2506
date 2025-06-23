@@ -78,7 +78,7 @@ while ($row = $result->fetch_assoc()) {
 <head>
     <meta charset="UTF-8">
     <title>借阅记录管理</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/manage_books.css">
 </head>
 <body>
     <h2>借阅记录管理</h2>

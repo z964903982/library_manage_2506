@@ -82,6 +82,7 @@ if (isset($_GET['delete'])) {
 <head>
     <meta charset="UTF-8">
     <title>学生账户管理</title>
+    <link rel="stylesheet" href="../../css/manage_books.css">
 </head>
 <body>
     <h2>学生账户管理</h2>

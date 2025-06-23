@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'student') {
 <head>
     <meta charset="UTF-8">
     <title>学生主页</title>
-    <link rel="stylesheet" href="../css/student_dashboard.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
 
 </head>
 

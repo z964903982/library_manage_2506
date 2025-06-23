@@ -66,7 +66,7 @@ $reviews = $review_stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <title>图书详情 - <?php echo htmlspecialchars($book['title']); ?></title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/book_detail.css">
     <style>
         .detail-container { max-width: 800px; margin: auto; padding: 20px; }
         .book-info img { float: left; width: 150px; margin-right: 20px; }

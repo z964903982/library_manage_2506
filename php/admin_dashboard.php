@@ -13,7 +13,7 @@ $permission = $_SESSION['permission'];
 <head>
     <meta charset="UTF-8">
     <title>管理员主页</title>
-    <link rel="stylesheet" href="../css/student_dashboard.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 
 <body>
@@ -32,16 +32,16 @@ $permission = $_SESSION['permission'];
                 <?php else: ?>
                 <td style="color:gray;">学生账户管理（无权限）</td>
                 <?php endif; ?>
-                <td><a href="../php/admin/borrow_requests.php">处理借阅请求</a></td>
+                <td><a href="../php/admin/borrow_requests.php">借阅记录管理</a></td>
                 <td><a href="../php/admin/manage_reservations.php">管理预约队列</a></td>
             </tr>
             <tr>
                 <td><a href="../php/admin/handle_exceptions.php">异常图书处理</a></td>
                 <td><a href="../php/admin/manage_comment.php">评论信息管理</a></td>
                 <?php if ($permission == 2): ?>
-                <td><a href="../php/admin/manage_fines.php">罚款规则设置</a></td>
+                <td><a href="../php/admin/manage_fines.php">系统参数配置</a></td>
                 <?php else: ?>
-                <td style="color:gray;">罚款规则设置（无权限）</td>
+                <td style="color:gray;">系统参数配置（无权限）</td>
                 <?php endif; ?>
                 
                 <td><a href="../php/admin/statistics.php">统计报表</a></td>

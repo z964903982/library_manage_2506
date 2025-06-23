@@ -16,15 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $new_email = $_POST['email'] ?? '';
     $new_password = $_POST['password'] ?? '';
 
-    // 非空校验和格式校验（可选）
     if (empty($new_contact) || empty($new_email)) {
         $error = "手机号和邮箱不能为空";
     } else {
-        // 如果填写了密码，则加密后更新
+        // 不加密密码，直接保存（ 实验用途）
         if (!empty($new_password)) {
-            $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
             $stmt = $conn->prepare("UPDATE student SET contact = ?, email = ?, password = ? WHERE student_id = ?");
-            $stmt->bind_param("ssss", $new_contact, $new_email, $hashed_password, $student_id);
+            $stmt->bind_param("ssss", $new_contact, $new_email, $new_password, $student_id);
         } else {
             $stmt = $conn->prepare("UPDATE student SET contact = ?, email = ? WHERE student_id = ?");
             $stmt->bind_param("sss", $new_contact, $new_email, $student_id);
@@ -38,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+
 // 查询当前学生信息
 $stmt = $conn->prepare("SELECT * FROM student WHERE student_id = ?");
 $stmt->bind_param("s", $student_id);
@@ -50,9 +49,10 @@ $student = $stmt->get_result()->fetch_assoc();
 <head>
     <meta charset="UTF-8">
     <title>账户信息</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/student_info.css">
 </head>
 <body>
+<div class="container">
 
 <h2>账户信息</h2>
 
@@ -82,6 +82,6 @@ $student = $stmt->get_result()->fetch_assoc();
     <label>新密码：<input type="password" name="password" placeholder="不修改可留空"></label><br><br>
     <button type="submit">保存修改</button>
 </form>
-
+</div>
 </body>
 </html>

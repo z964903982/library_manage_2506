@@ -23,6 +23,65 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id'])) {
 <head>
     <meta charset="UTF-8">
     <title>评论管理</title>
+    <style>
+    body {
+        font-family: "Helvetica Neue", "微软雅黑", sans-serif;
+        background-color: #f0f8ff;
+        padding: 20px;
+        color: #333;
+    }
+
+    h1 {
+        color:rgb(0, 0, 0);
+        border-bottom: 2px solid #cce4f7;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 14px;
+        background-color: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    table th,
+    table td {
+        border: 1px solid #cce4f7;
+        padding: 10px 12px;
+        text-align: center;
+    }
+
+    table th {
+        background-color: #32729c;
+        color: white;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f5faff;
+    }
+
+    .btn-delete {
+        background-color: #fff;
+        color: #d9534f;
+        border: 1px solid #d9534f;
+        padding: 4px 10px;
+        font-size: 13px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .btn-delete:hover {
+        background-color: #d9534f;
+        color: #fff;
+    }
+</style>
+
 </head>
 <body>
 
@@ -51,7 +110,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id'])) {
                 <td>
                     <form method='POST' style='display:inline;' onsubmit=\"return confirm('确定要删除这条评论吗？');\">
                         <input type='hidden' name='delete_id' value='{$row['review_id']}'>
-                        <input type='submit' value='删除'>
+                        <input type='submit' value='删除' class='btn-delete'>
+
                     </form>
                 </td>
               </tr>";

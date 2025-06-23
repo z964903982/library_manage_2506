@@ -73,7 +73,7 @@ while ($row = $result->fetch_assoc()) {
 <head>
     <meta charset="UTF-8">
     <title>我的借阅记录</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/my_borrow.css">
     <style>
         .record-section { margin-bottom: 30px; }
         .record-card {

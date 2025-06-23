@@ -1,0 +1,120 @@
+body {
+    background-color: #f0f8ff;
+    font-family: "Helvetica Neue", "微软雅黑", sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.detail-container {
+    max-width: 900px;
+    background-color: white;
+    margin: 40px auto;
+    padding: 30px;
+    border: 1px solid #cce4f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+h2,
+h3 {
+    color: #00070b;
+    border-bottom: 2px solid #cce4f7;
+    padding-bottom: 8px;
+}
+
+.book-info {
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.book-info img {
+    float: left;
+    width: 160px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.book-info p {
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #2a5e89;
+}
+
+select,
+textarea {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #cce4f7;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #32729c;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #265f85;
+}
+
+.review {
+    margin-top: 20px;
+    padding: 12px 16px;
+    border: 1px solid #e0eef7;
+    border-radius: 6px;
+    background-color: #f9fcff;
+}
+
+.review h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #2a5e89;
+}
+
+.review p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #cce4f7;
+    margin: 30px 0;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #32729c;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.error-msg {
+    color: red;
+    font-size: 14px;
+}

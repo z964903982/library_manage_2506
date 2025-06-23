@@ -1,0 +1,162 @@
+/* 个人信息页面 - 黑白浅蓝简约风格 */
+
+body {
+    font-family: "Helvetica Neue", "Microsoft YaHei", Arial, sans-serif;
+    background-color: #eaf4fc;
+    /* 浅蓝背景 */
+    margin: 0;
+    padding: 40px 20px;
+    color: #222;
+    /* 深灰色字体 */
+}
+
+/* 主体容器 */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(100, 150, 210, 0.15);
+    /* 浅蓝色阴影 */
+}
+
+/* 标题 */
+h2,
+h3 {
+    color: #3a7bd5;
+    /* 浅蓝色 */
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* 错误和成功信息 */
+p.error {
+    color: #d32f2f;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+p.success {
+    color: #388e3c;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* 警告信息 */
+.warning {
+    color: #d32f2f;
+    font-weight: 600;
+    background: #ffe8e8;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    margin-bottom: 30px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 16px;
+    color: #222;
+    background-color: #f4faff;
+    /* 很浅的蓝色背景 */
+    border: 1px solid #cbd9f7;
+    /* 浅蓝边框 */
+    border-radius: 8px;
+    transition: box-shadow 0.2s ease;
+}
+
+tbody tr:hover td {
+    box-shadow: 0 4px 16px rgba(58, 123, 213, 0.15);
+    /* 浅蓝色阴影 */
+}
+
+/* 表头 */
+th {
+    background-color: #cde1ff;
+    /* 浅蓝色表头背景 */
+    color: #333;
+    /* 深灰字体 */
+    font-weight: 700;
+    border-radius: 8px 8px 0 0;
+}
+
+/* 表单标签 */
+form label {
+    display: block;
+    font-weight: 600;
+    color: #3a7bd5;
+    /* 浅蓝色 */
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+/* 表单输入框 */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+    border: 1.8px solid #a6c1f7;
+    /* 轻柔的蓝紫色 */
+    border-radius: 10px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #3a7bd5;
+    /* 聚焦时浅蓝色边框 */
+    outline: none;
+}
+
+/* 按钮 */
+button {
+    background-color: #3a7bd5;
+    /* 浅蓝色按钮 */
+    color: white;
+    padding: 12px 28px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a99f7;
+    /* 亮一点的蓝 */
+    box-shadow: 0 6px 16px rgba(58, 123, 213, 0.4);
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    th,
+    td {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+    }
+}

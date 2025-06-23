@@ -1,0 +1,126 @@
+/* 页面整体布局 */
+body {
+    background-color: #e6f0fa;
+    /* 浅蓝背景 */
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    /* 内容纵向排列 */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 内容卡片 */
+form,
+h2,
+p {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 122, 204, 0.15);
+    /* 蓝色阴影 */
+    margin-top: 10px;
+}
+
+/* 标题样式 */
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+    /* 深蓝主色 */
+    margin-bottom: 20px;
+}
+
+/* 输入框样式 */
+input,
+select {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 10px 0;
+    border: 1px solid #cce0f0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9fbfd;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #4a90e2;
+    background-color: #ffffff;
+}
+
+/* 按钮样式 */
+.button-wrapper {
+    text-align: center;
+    /* 让按钮水平居中 */
+    margin-top: 20px;
+    /* 按钮上方间距 */
+}
+
+button {
+    width: 150px;
+    /* 设置固定宽度 */
+    padding: 12px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px auto 0;
+    /* 上间距 + 水平居中 */
+    display: block;
+    /* 搭配 margin auto 实现居中 */
+}
+
+
+button:hover {
+    background-color: #007acc;
+    /* 深一点的蓝色悬停 */
+}
+
+/* 链接样式 */
+a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 小提示文本 */
+p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* 注册页专用：输入项两列布局 */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 16px;
+    margin-bottom: 10px;
+}
+
+.form-grid input,
+.form-grid select {
+    width: 100%;
+    margin: 0;
+}

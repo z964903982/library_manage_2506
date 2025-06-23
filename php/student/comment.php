@@ -58,7 +58,7 @@ $reviews = $review_stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <title>我的评价</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/comment.css">
     <style>
         .container { max-width: 900px; margin: auto; padding: 20px; }
         .review-block { border: 1px solid #ccc; padding: 15px; margin-bottom: 15px; border-radius: 8px; }

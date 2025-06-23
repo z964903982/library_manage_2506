@@ -38,7 +38,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>异常图书处理</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/manage_books.css">
 </head>
 <body>
     <h2>异常图书处理（下架/遗失）</h2>

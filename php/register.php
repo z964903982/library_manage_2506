@@ -32,12 +32,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $hashed_password = $password;  // 明文密码
 
-// 进行插入数据操作
-    $stmt = $conn->prepare("INSERT INTO student 
-        (student_id, name, gender, department, major, grade, class, contact, email, status, max_borrow, current_borrow, password)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, '正常', 5, 0, ?)");
 
-    $stmt->bind_param("ssssssssss", $student_id, $name, $gender, $department, $major, $grade, $class, $contact, $email, $hashed_password);
+     // 获取系统最大借阅数
+     $max_borrow = 5; // 默认值（以防系统表未设置）
+     $config_sql = "SELECT config_value FROM systemconfig WHERE config_key = 'max_borrow_limit'";
+     $result = $conn->query($config_sql);
+     if ($result && $row = $result->fetch_assoc()) {
+         $max_borrow = intval($row['config_value']);
+     }
+
+// 进行插入数据操作
+     $stmt = $conn->prepare("INSERT INTO student 
+        (student_id, name, gender, department, major, grade, class, contact, email, status, max_borrow, current_borrow, password)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, '正常', ?, 0, ?)");
+
+$stmt->bind_param("sssssssssis", $student_id, $name, $gender, $department, $major, $grade, $class, $contact, $email, $max_borrow, $hashed_password);
+
 
     if ($stmt->execute()) {
         echo "<script>alert('注册成功！请登录'); window.location.href='../html/login.html';</script>";

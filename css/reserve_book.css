@@ -1,0 +1,104 @@
+body {
+    font-family: "Helvetica Neue", "Microsoft YaHei", Arial, sans-serif;
+    background-color: #eaf4fc;
+    /* 浅蓝背景 */
+    margin: 0;
+    padding: 20px 40px;
+    color: #333;
+}
+
+h2,
+h3 {
+    color: #002246;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+/* 卡片容器 */
+.book-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 122, 204, 0.15);
+    padding: 18px 24px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    transition: box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    box-shadow: 0 8px 28px rgba(0, 122, 204, 0.25);
+}
+
+/* 封面图片 */
+.book-card img {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 图书信息 */
+.book-info {
+    flex-grow: 1;
+}
+
+.book-info h3 {
+    margin: 0 0 8px;
+    color: #007acc;
+    font-size: 20px;
+}
+
+.book-info p {
+    margin: 6px 0;
+    font-size: 15px;
+    color: #444;
+}
+
+/* 状态文字 */
+.status-hint {
+    font-weight: 600;
+    color: #d32f2f;
+    margin-top: 10px;
+}
+
+/* 取消预约按钮 */
+.book-info form {
+    margin-top: 12px;
+}
+
+.book-info button {
+    background-color: #007acc;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+}
+
+.book-info button:hover {
+    background-color: #005fa3;
+    box-shadow: 0 6px 18px rgba(0, 122, 204, 0.4);
+}
+
+/* 提示信息 */
+p[style*="color: green;"],
+p[style*="color: red;"] {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+p[style*="color: green;"] {
+    color: #2e7d32;
+}
+
+p[style*="color: red;"] {
+    color: #d32f2f;
+}
